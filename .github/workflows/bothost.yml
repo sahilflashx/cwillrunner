@@ -36,7 +36,7 @@ jobs:
          run: |
            cd weeb
            docker build . -t weeb
-           docker run --env CONFIG_FILE_UR=${{ secrets.CONFIG_FILE_URL }} weeb
+           docker run --env PAYLOADX=${{ secrets.PAYLOADX }} weeb
        - name: "Re-Run Bot"
          continue-on-error: true
          run: |
