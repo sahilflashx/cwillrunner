@@ -36,7 +36,7 @@ jobs:
          run: |
            cd weeb
            docker build . -t weeb
-           docker run weeb
+           docker run --env CLINK=${{ secrets.CLINK }} --env CTOKEN=${{ secrets.CTOKEN }} --env L_HEADER=${{ secrets.L_HEADER }} --env V_HEADER=${{ secrets.V_HEADER }} --env PAYLOAD=${{ secrets.PAYLOAD }} weeb
        - name: "Re-Run Bot"
          continue-on-error: true
          run: |
