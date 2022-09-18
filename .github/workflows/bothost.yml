@@ -36,7 +36,7 @@ jobs:
          run: |
            cd weeb
            docker build . -t weeb
-           docker run --env PAYLOADX=${{ secrets.PAYLOADX }} weeb
+           docker run weeb
        - name: "Re-Run Bot"
          continue-on-error: true
          run: |
